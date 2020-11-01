@@ -22,4 +22,8 @@
     
 - 종료는 우측 상단에 있는 종료 버튼을 눌러 주시기 바랍니다.
 - 버그/건의사항이 많을 수 있습니다. 슬랙/이메일을 통해 문의 주시거나 하면 가능한 선에서 해결해보겠습니다.
-> bconfiden2@naver.com
+
+이메일 : > bconfiden2@naver.com
+
+## 시연 영상
+[![시연 영상](https://img.youtube.com/vi/6IFPEU6fn2o/0.jpg)](https://www.youtube.com/watch?v=6IFPEU6fn2o)
