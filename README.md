@@ -1,9 +1,11 @@
 # FrameWork-Simulator-Ball-on-Beam
 
 ## 실행방법
-    - 반드시 전체 파일을 다 받아야 하는 것은 아닙니다!!!
-    - 유니티가 없으신 분들은 executable 폴더에 있는 내용만 받아서, 그 안에 있는 FrameworkSimulator 실행파일만 시켜주시면 됩니다.
-    - 유니티 프로젝트를 열어보고 싶으신 분들은 19.2.6f1 를 설치하시고 프로젝트를 열어주시기 바랍니다.
+    - !!!반드시 전체 파일을 다 받아야 하는 것은 아닙니다!!!
+    - Windows 10 사용자분들은 executable.zip 만 받아서, 그 안에 있는 FrameworkSimulator 실행파일만 시켜주시면 됩니다.
+    - ubuntu 18.04 사용자분들을 위해 executable_ubuntu.zip 으로 리눅스용 빌드파일을 추가하였습니다.
+    - 유니티 프로젝트를 열어보고 싶으신 분들은 에디터버젼 19.2.6f1 를 설치하시고 프로젝트를 열어주시기 바랍니다.
+    - 버젼 19.4.13 LTS 의 경우도 호환성 문제 없이 작동하는 것을 확인하였습니다.
 
 ## 값 설정 UI
     1. 왼쪽 측면에 A,B,C,D,E 칸과 적용 버튼, 슬라이더가 있습니다.
@@ -23,7 +25,7 @@
 - 종료는 우측 상단에 있는 종료 버튼을 눌러 주시기 바랍니다.
 - 버그/건의사항이 많을 수 있습니다. 슬랙/이메일을 통해 문의 주시거나 하면 가능한 선에서 해결해보겠습니다.
 
-이메일 : > bconfiden2@naver.com
+이메일  > bconfiden2@naver.com
 
 ## 시연 영상
 [![시연 영상](https://img.youtube.com/vi/6IFPEU6fn2o/0.jpg)](https://www.youtube.com/watch?v=6IFPEU6fn2o)
