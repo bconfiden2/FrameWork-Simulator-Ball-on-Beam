@@ -23,6 +23,7 @@ public class PointManager : MonoBehaviour
 
     public Slider values;
     public Transform ball;
+    public Text railDegree;
 
 
     // 처음 시작할 때 A,B,C,D,E 값 초기화 및 각종 값들 적용
@@ -76,6 +77,8 @@ public class PointManager : MonoBehaviour
         }
 
         transform.position = new Vector3(x, y, transform.position.z);
+
+        railDegree.text = (180 - Mathf.Round(Mathf.Rad2Deg * Mathf.Atan2(x - p, y - q))).ToString() + "도";
     }
 
     // 계산을 위한 서보의 위치와 T경첩의 위치를 갱신
