@@ -13,7 +13,7 @@ public class ShowDegree : MonoBehaviour
         tx = GetComponent<Text>();
     }
 
-    // Update is called once per frame
+    // 사용자가 조절하는 슬라이더 값을 받아와서 UI 로 표시.
     void Update()
     {
         tx.text = Mathf.Round(sd.value).ToString() + "도";
