@@ -6,8 +6,8 @@ using UnityEngine.UI;
 
 public class PointManager : MonoBehaviour
 {
-    public Text[] texts = new Text[5];
-    public float[] val = new float[6];
+    public Text[] texts = new Text[7];
+    public float[] val = new float[8];
 
     public Positioner_Arms UpperArm;
     public Positioner_Arms LowerArm;
@@ -24,6 +24,10 @@ public class PointManager : MonoBehaviour
     public Slider values;
     public Transform ball;
     public Text railDegree;
+    public Text servoValue;
+
+    int MIN = 553;
+    int MAX = 2399;
 
 
     // 처음 시작할 때 A,B,C,D,E 값 초기화 및 각종 값들 적용
@@ -34,6 +38,8 @@ public class PointManager : MonoBehaviour
         val[3] = 10;
         val[4] = 9;
         val[5] = 3.7f;
+        val[6] = 2399f;
+        val[7] = 553f;
 
         RailJoint.SetPosition(val[1] + val[2]);
 
@@ -78,7 +84,11 @@ public class PointManager : MonoBehaviour
 
         transform.position = new Vector3(x, y, transform.position.z);
 
+        degree = -degree + 90;
+
         railDegree.text = (180 - Mathf.Round(Mathf.Rad2Deg * Mathf.Atan2(x - p, y - q))).ToString() + "도";
+        servoValue.text = "(" + ((int)(MIN + (MAX - MIN) * degree / 180)).ToString() + ")";
+        Debug.Log(degree);
     }
 
     // 계산을 위한 서보의 위치와 T경첩의 위치를 갱신
@@ -94,7 +104,7 @@ public class PointManager : MonoBehaviour
     public void ValueChanged()
     {
         // A,B,C,D,E 각각에 들어있는 값들을 확인해서
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < 7; i++)
         {
             if (texts[i].text != "") val[i+1] = float.Parse(texts[i].text);
         }
@@ -104,6 +114,8 @@ public class PointManager : MonoBehaviour
         UpperArm.SetSize(val[3]);   // 어퍼암 길이 적용 (C)
         LowerArm.SetSize(val[4]);   // 로워암 길이 적용 (D)
         ServoSupporter.SetPosition(val[5]); // 서보 위치 적용 (E)
+        MAX = (int)val[6];
+        MIN = (int)val[7];
         Calculation();
         Reset_Ball();
     }
